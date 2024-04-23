@@ -7,18 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		364A7DDB2BD7F873003DDD7C /* EnableLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A7DDA2BD7F873003DDD7C /* EnableLocationView.swift */; };
 		3661D3172BD13C5F004451D4 /* AccukWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3661D3162BD13C5F004451D4 /* AccukWeatherApp.swift */; };
 		3661D3192BD13C5F004451D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3661D3182BD13C5F004451D4 /* ContentView.swift */; };
 		3661D31B2BD13C61004451D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3661D31A2BD13C61004451D4 /* Assets.xcassets */; };
 		3661D31E2BD13C61004451D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3661D31D2BD13C61004451D4 /* Preview Assets.xcassets */; };
+		368205AD2BD2A092000655C3 /* TodayTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368205AC2BD2A092000655C3 /* TodayTabView.swift */; };
+		368205AF2BD2A0AD000655C3 /* ForecastTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368205AE2BD2A0AD000655C3 /* ForecastTabView.swift */; };
+		368205B32BD2A0E6000655C3 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368205B22BD2A0E6000655C3 /* NetworkingManager.swift */; };
+		368205B52BD2A20A000655C3 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368205B42BD2A20A000655C3 /* WeatherResponse.swift */; };
+		36BDCA8C2BD724FB00A8A9C0 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDCA8B2BD724FB00A8A9C0 /* NetworkMonitor.swift */; };
+		36BDCA8E2BD729F800A8A9C0 /* TodayTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDCA8D2BD729F800A8A9C0 /* TodayTabViewModel.swift */; };
+		36F967462BD69C560093FD56 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F967452BD69C560093FD56 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		364A7DDA2BD7F873003DDD7C /* EnableLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableLocationView.swift; sourceTree = "<group>"; };
 		3661D3132BD13C5F004451D4 /* AccukWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccukWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3661D3162BD13C5F004451D4 /* AccukWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccukWeatherApp.swift; sourceTree = "<group>"; };
 		3661D3182BD13C5F004451D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3661D31A2BD13C61004451D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3661D31D2BD13C61004451D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		368205AA2BD15E25000655C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		368205AC2BD2A092000655C3 /* TodayTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTabView.swift; sourceTree = "<group>"; };
+		368205AE2BD2A0AD000655C3 /* ForecastTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTabView.swift; sourceTree = "<group>"; };
+		368205B22BD2A0E6000655C3 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		368205B42BD2A20A000655C3 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		36BDCA8B2BD724FB00A8A9C0 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		36BDCA8D2BD729F800A8A9C0 /* TodayTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTabViewModel.swift; sourceTree = "<group>"; };
+		36F967452BD69C560093FD56 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +68,15 @@
 		3661D3152BD13C5F004451D4 /* AccukWeather */ = {
 			isa = PBXGroup;
 			children = (
+				368205AA2BD15E25000655C3 /* Info.plist */,
 				3661D3162BD13C5F004451D4 /* AccukWeatherApp.swift */,
 				3661D3182BD13C5F004451D4 /* ContentView.swift */,
+				368205AC2BD2A092000655C3 /* TodayTabView.swift */,
+				364A7DDA2BD7F873003DDD7C /* EnableLocationView.swift */,
+				36BDCA8D2BD729F800A8A9C0 /* TodayTabViewModel.swift */,
+				368205AE2BD2A0AD000655C3 /* ForecastTabView.swift */,
+				368205B42BD2A20A000655C3 /* WeatherResponse.swift */,
+				36BDCA8A2BD724CE00A8A9C0 /* Networking */,
 				3661D31A2BD13C61004451D4 /* Assets.xcassets */,
 				3661D31C2BD13C61004451D4 /* Preview Content */,
 			);
@@ -65,6 +89,16 @@
 				3661D31D2BD13C61004451D4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36BDCA8A2BD724CE00A8A9C0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				36F967452BD69C560093FD56 /* LocationManager.swift */,
+				36BDCA8B2BD724FB00A8A9C0 /* NetworkMonitor.swift */,
+				368205B22BD2A0E6000655C3 /* NetworkingManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +171,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364A7DDB2BD7F873003DDD7C /* EnableLocationView.swift in Sources */,
 				3661D3192BD13C5F004451D4 /* ContentView.swift in Sources */,
+				36BDCA8C2BD724FB00A8A9C0 /* NetworkMonitor.swift in Sources */,
+				368205AF2BD2A0AD000655C3 /* ForecastTabView.swift in Sources */,
+				368205B52BD2A20A000655C3 /* WeatherResponse.swift in Sources */,
+				36F967462BD69C560093FD56 /* LocationManager.swift in Sources */,
+				36BDCA8E2BD729F800A8A9C0 /* TodayTabViewModel.swift in Sources */,
+				368205B32BD2A0E6000655C3 /* NetworkingManager.swift in Sources */,
+				368205AD2BD2A092000655C3 /* TodayTabView.swift in Sources */,
 				3661D3172BD13C5F004451D4 /* AccukWeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +317,13 @@
 				DEVELOPMENT_TEAM = S5L3P52742;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AccukWeather/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +348,13 @@
 				DEVELOPMENT_TEAM = S5L3P52742;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AccukWeather/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
