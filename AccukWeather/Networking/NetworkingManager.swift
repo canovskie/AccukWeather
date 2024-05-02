@@ -4,13 +4,15 @@ enum NetworkError: Error {
     case invalidURL
     case requestFailed(Error)
     case invalidResponse
-    case invalidData
+    case noData
 }
 
-class NetworkingManager {
+protocol Networking {
+    func fetchData<T: Codable>(from urlString: String, completion: @escaping (Result<T, NetworkError>) -> Void)
+}
+
+class NetworkingManager: Networking {
     static let shared = NetworkingManager()
-    
-    private init() {}
     
     func fetchData<T: Codable>(from urlString: String, completion: @escaping (Result<T, NetworkError>) -> Void) {
         guard let url = URL(string: urlString) else {
@@ -31,7 +33,7 @@ class NetworkingManager {
             }
             
             guard let data = data else {
-                completion(.failure(.invalidData))
+                completion(.failure(.noData))
                 return
             }
             
@@ -39,7 +41,7 @@ class NetworkingManager {
                 let decodedData = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(decodedData))
             } catch {
-                completion(.failure(.invalidData))
+                completion(.failure(.invalidResponse))
             }
         }.resume()
     }

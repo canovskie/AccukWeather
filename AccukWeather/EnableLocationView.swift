@@ -10,8 +10,6 @@ struct EnableLocationView: View {
             Text("Enable Location")
         }
     }
-    
-    
 }
 
 #Preview {

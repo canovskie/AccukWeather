@@ -1,10 +1,16 @@
 import SwiftUI
 import CoreLocation
 
+protocol LocationManagerDelegate {
+    func didUpdateLocation()
+}
+
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private var locationManager = CLLocationManager()
     @Published var userLocation: CLLocation?
     @Published var userPlacemark: CLPlacemark?
+    
+    var delegate: LocationManagerDelegate?
 
     override init() {
         super.init()
@@ -16,6 +22,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             self.userLocation = location
+            delegate?.didUpdateLocation()
+            
             let geocoder = CLGeocoder()
             geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
                 if let error = error {

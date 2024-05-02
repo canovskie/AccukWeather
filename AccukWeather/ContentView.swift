@@ -13,8 +13,6 @@ struct ContentView: View {
             ForecastTabView()
                 .tabItem {
                     Image("ic_forecast")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
                     Text("Forecast")
                 }
         }
