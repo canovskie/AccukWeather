@@ -25,6 +25,7 @@
 		FB529AD52BEEC131003540AE /* ForecastRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB529AD42BEEC131003540AE /* ForecastRouter.swift */; };
 		FB529AD82BEEC233003540AE /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB529AD72BEEC233003540AE /* AppConstants.swift */; };
 		FB529ADA2BEEC333003540AE /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB529AD92BEEC333003540AE /* ForecastService.swift */; };
+		FB529ADC2BEEC9EF003540AE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB529ADB2BEEC9EF003540AE /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		FB529AD42BEEC131003540AE /* ForecastRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRouter.swift; sourceTree = "<group>"; };
 		FB529AD72BEEC233003540AE /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		FB529AD92BEEC333003540AE /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
+		FB529ADB2BEEC9EF003540AE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				FB529AD62BEEC228003540AE /* Utils */,
 				36BDCA8A2BD724CE00A8A9C0 /* Networking */,
 				3661D31A2BD13C61004451D4 /* Assets.xcassets */,
+				FB529ADB2BEEC9EF003540AE /* Colors.xcassets */,
 				3661D31C2BD13C61004451D4 /* Preview Content */,
 			);
 			path = AccukWeather;
@@ -209,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB529ADC2BEEC9EF003540AE /* Colors.xcassets in Resources */,
 				3661D31E2BD13C61004451D4 /* Preview Assets.xcassets in Resources */,
 				3661D31B2BD13C61004451D4 /* Assets.xcassets in Resources */,
 			);

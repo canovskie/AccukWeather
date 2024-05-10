@@ -16,12 +16,13 @@ struct TodayInfoCell: View {
                 .font(.system(size: 72))
                 .fontWeight(.heavy)
                 .multilineTextAlignment(.leading)
-                
+                .foregroundStyle(Color(.primaryLabel))
 
-            Image("\(viewModel.weatherImageName)\(viewModel.themeSuffix)")
+            Image("\(viewModel.weatherImageName)-Dark")
                 .scaleEffect(1.5)
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.bottom)
+                .aspectRatio(contentMode: .fit)
+                .padding(.bottom)
+                .foregroundStyle(Color(.primaryLabel))
 
             Text("\(viewModel.temperature)")
                 .fontWeight(.bold)
