@@ -8,19 +8,26 @@ enum NetworkError: Error {
 }
 
 protocol Networking {
-    func fetchData<T: Codable>(from urlString: String, completion: @escaping (Result<T, NetworkError>) -> Void)
+    func fetchData<T: Codable>(from urlString: String,
+                               httpMethod: String,
+                               completion: @escaping (Result<T, NetworkError>) -> Void)
 }
 
 class NetworkingManager: Networking {
     static let shared = NetworkingManager()
     
-    func fetchData<T: Codable>(from urlString: String, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    func fetchData<T: Codable>(from urlString: String,
+                               httpMethod: String,
+                               completion: @escaping (Result<T, NetworkError>) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(.failure(.invalidURL))
             return
         }
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        var request = URLRequest(url: url)
+        request.httpMethod = httpMethod
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 completion(.failure(.requestFailed(error)))
                 return

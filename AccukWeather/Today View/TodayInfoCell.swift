@@ -40,5 +40,7 @@ struct TodayInfoCell: View {
 }
 
 #Preview {
-    TodayInfoCell()
+    TodayInfoCell(
+        viewModel: TodayTabViewModel(forecastService: ForecastServiceMocker())
+    )
 }

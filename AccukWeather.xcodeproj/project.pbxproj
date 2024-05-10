@@ -22,6 +22,9 @@
 		36BDCA8C2BD724FB00A8A9C0 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDCA8B2BD724FB00A8A9C0 /* NetworkMonitor.swift */; };
 		36BDCA8E2BD729F800A8A9C0 /* TodayTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDCA8D2BD729F800A8A9C0 /* TodayTabViewModel.swift */; };
 		36F967462BD69C560093FD56 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F967452BD69C560093FD56 /* LocationManager.swift */; };
+		FB529AD52BEEC131003540AE /* ForecastRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB529AD42BEEC131003540AE /* ForecastRouter.swift */; };
+		FB529AD82BEEC233003540AE /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB529AD72BEEC233003540AE /* AppConstants.swift */; };
+		FB529ADA2BEEC333003540AE /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB529AD92BEEC333003540AE /* ForecastService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		36BDCA8B2BD724FB00A8A9C0 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		36BDCA8D2BD729F800A8A9C0 /* TodayTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTabViewModel.swift; sourceTree = "<group>"; };
 		36F967452BD69C560093FD56 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FB529AD42BEEC131003540AE /* ForecastRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRouter.swift; sourceTree = "<group>"; };
+		FB529AD72BEEC233003540AE /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		FB529AD92BEEC333003540AE /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +97,8 @@
 				3661D3182BD13C5F004451D4 /* ContentView.swift */,
 				3607DAFD2BED96550066452A /* ForecastView.swift */,
 				368205AE2BD2A0AD000655C3 /* SutlacView.swift */,
-				368205B42BD2A20A000655C3 /* WeatherResponse.swift */,
 				3607DAFC2BED8CB10066452A /* Today View */,
+				FB529AD62BEEC228003540AE /* Utils */,
 				36BDCA8A2BD724CE00A8A9C0 /* Networking */,
 				3661D31A2BD13C61004451D4 /* Assets.xcassets */,
 				3661D31C2BD13C61004451D4 /* Preview Content */,
@@ -111,11 +117,38 @@
 		36BDCA8A2BD724CE00A8A9C0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				FB529AD32BEEC125003540AE /* Services */,
+				FB529AD22BEEBF26003540AE /* Model */,
 				36F967452BD69C560093FD56 /* LocationManager.swift */,
 				36BDCA8B2BD724FB00A8A9C0 /* NetworkMonitor.swift */,
 				368205B22BD2A0E6000655C3 /* NetworkingManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		FB529AD22BEEBF26003540AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				368205B42BD2A20A000655C3 /* WeatherResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB529AD32BEEC125003540AE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FB529AD42BEEC131003540AE /* ForecastRouter.swift */,
+				FB529AD92BEEC333003540AE /* ForecastService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FB529AD62BEEC228003540AE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FB529AD72BEEC233003540AE /* AppConstants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,8 +225,11 @@
 				3607DAF92BED08B20066452A /* WeatherInfoCell.swift in Sources */,
 				36BDCA8C2BD724FB00A8A9C0 /* NetworkMonitor.swift in Sources */,
 				368205AF2BD2A0AD000655C3 /* SutlacView.swift in Sources */,
+				FB529AD82BEEC233003540AE /* AppConstants.swift in Sources */,
 				368205B52BD2A20A000655C3 /* WeatherResponse.swift in Sources */,
+				FB529AD52BEEC131003540AE /* ForecastRouter.swift in Sources */,
 				36F967462BD69C560093FD56 /* LocationManager.swift in Sources */,
+				FB529ADA2BEEC333003540AE /* ForecastService.swift in Sources */,
 				3607DAFE2BED96550066452A /* ForecastView.swift in Sources */,
 				36BDCA8E2BD729F800A8A9C0 /* TodayTabViewModel.swift in Sources */,
 				366601E22BE2ACA30035254D /* ShowWeatherImage.swift in Sources */,
