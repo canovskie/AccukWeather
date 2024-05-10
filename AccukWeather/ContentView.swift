@@ -1,18 +1,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     var body: some View {
         
         TabView {
             TodayTabView()
                 .tabItem {
-                    Image("ic_today")
+                    Image("TabBarToday-Light")
                     Text("Today")
                 }
-            ForecastTabView()
+            ForecastView()
                 .tabItem {
-                    Image("ic_forecast")
+                    Image("TabBarForecast-Dark")
                     Text("Forecast")
                 }
         }
