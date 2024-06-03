@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TodayInfoCell: View {
-    @StateObject var viewModel = TodayTabViewModel()
+    @StateObject var viewModel = TodayViewModel()
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0.0) {
@@ -16,18 +16,16 @@ struct TodayInfoCell: View {
                 .font(.system(size: 72))
                 .fontWeight(.heavy)
                 .multilineTextAlignment(.leading)
-                .foregroundStyle(Color(.primaryLabel))
 
             Image("\(viewModel.weatherImageName)-Dark")
                 .scaleEffect(1.5)
                 .aspectRatio(contentMode: .fit)
                 .padding(.bottom)
-                .foregroundStyle(Color(.primaryLabel))
 
             Text("\(viewModel.temperature)")
                 .fontWeight(.bold)
                 .font(.title)
-
+            
             if let placemark = viewModel.locationManager.userPlacemark {
                 Text("\(placemark.locality ?? "Bilinmiyor"), \(placemark.country ?? "Bilinmiyor")")
                     .font(.footnote)
@@ -42,6 +40,6 @@ struct TodayInfoCell: View {
 
 #Preview {
     TodayInfoCell(
-        viewModel: TodayTabViewModel(forecastService: ForecastServiceMocker())
+        viewModel: TodayViewModel(weatherService: WeatherServiceMocker())
     )
 }

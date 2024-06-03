@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension TodayTabViewModel {
+extension TodayViewModel {
     
     func showWeatherImage() {
         guard let weatherMain = weatherData?.weather?.first?.main else {

@@ -76,6 +76,8 @@ extension WeatherResponse {
         let sys = Sys(type: 2, id: 2019646, country: "GB", sunrise: 1638433868, sunset: 1638478668)
 
         let weatherResponse = WeatherResponse(coord: coord, weather: [weather], base: "stations", main: main, visibility: 10000, wind: wind, rain: nil, clouds: clouds, dt: 1638470434, sys: sys, timezone: 0, id: 2643743, name: "London", cod: 200)
+        
         return weatherResponse
     }
+    
 }

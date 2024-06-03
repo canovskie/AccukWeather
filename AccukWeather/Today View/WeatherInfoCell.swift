@@ -12,7 +12,7 @@ struct TodayFootnoteTextStyle: ViewModifier {
 }
 
 struct WeatherInfoCell: View {
-    @StateObject var viewModel = TodayTabViewModel()
+    @StateObject var viewModel = TodayViewModel()
     
     var body: some View {
         HStack {

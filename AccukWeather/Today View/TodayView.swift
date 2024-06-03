@@ -1,8 +1,8 @@
 import SwiftUI
 import CoreLocation
 
-struct TodayTabView: View {
-    @StateObject var viewModel = TodayTabViewModel()
+struct TodayView: View {
+    @StateObject var viewModel = TodayViewModel()
     
     var body: some View {
         ZStack {
@@ -12,7 +12,7 @@ struct TodayTabView: View {
             VStack {
                 TodayInfoCell()
                 WeatherInfoCell()
-            }
+            }.foregroundColor(viewModel.isNightTime() ? .white : .black)
         }
         .onAppear {
             viewModel.onAppear()
@@ -22,6 +22,6 @@ struct TodayTabView: View {
 
 struct TodayTabView_Previews: PreviewProvider {
     static var previews: some View {
-        TodayTabView()
+        TodayView()
     }
 }

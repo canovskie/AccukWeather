@@ -4,7 +4,7 @@ struct ContentView: View {
     var body: some View {
         
         TabView {
-            TodayTabView()
+            TodayView()
                 .tabItem {
                     Image("TabBarToday-Light")
                     Text("Today")

@@ -2,7 +2,8 @@ import SwiftUI
 
 struct SutlacView: View {
     @State private var isCooking: Bool = false
-    
+    @State private var isActive: Bool = false
+
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -10,12 +11,27 @@ struct SutlacView: View {
             
             VStack {
                 Spacer()
-                
-                Text("Sütlaç Tarifi")
-                    .font(.title)
-                    .foregroundColor(.white)
-                    .padding()
-                
+                VStack(alignment: .leading) {
+                    HStack(){
+                        Button("<"){
+                            self.isActive = true
+                        }.font(.title)
+                            .padding(.horizontal)
+                            .foregroundColor(.white)
+                        
+                        NavigationLink(destination: ForecastView().navigationBarBackButtonHidden(true), isActive: $isActive) {
+                            EmptyView()
+                        }
+                        Spacer()
+                        Text("Sütlaç Tarifi")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .padding()
+                        Spacer()
+                        Spacer()
+                    }
+                    
+                }
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Malzemeler:")
                         .font(.headline)

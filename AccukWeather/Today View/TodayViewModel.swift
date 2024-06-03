@@ -1,8 +1,8 @@
 import SwiftUI
 
-class TodayTabViewModel: ObservableObject {
+class TodayViewModel: ObservableObject {
     @ObservedObject var locationManager: LocationManager
-    private let forecastService: ForecastServiceProtocol
+    private let weatherService: WeatherServiceProtocol
     @Published var weatherData: WeatherResponse? {
         didSet {
             showWeatherImage()
@@ -25,11 +25,11 @@ class TodayTabViewModel: ObservableObject {
     
     init(locationManager: LocationManager = LocationManager(),
          weatherData: WeatherResponse? = nil,
-         forecastService: ForecastServiceProtocol = ForecastService(),
+         weatherService: WeatherServiceProtocol = WeatherService(),
          isRainLoaded: Bool = false) {
         self.locationManager = locationManager
         self.weatherData = weatherData
-        self.forecastService = forecastService
+        self.weatherService = weatherService
         self.isRainLoaded = isRainLoaded
         weatherImageName = ""
         themeSuffix = "-Light"
@@ -50,7 +50,7 @@ class TodayTabViewModel: ObservableObject {
         let coord = Coord(lon: userLocation.coordinate.longitude, 
                           lat: userLocation.coordinate.latitude)
         
-        forecastService.getForecast(coordinates: coord) { (result: Result<WeatherResponse, NetworkError>) in
+        weatherService.getToday(coordinates: coord) { (result: Result<WeatherResponse, NetworkError>) in
             switch result {
             case .success(let data):
                 DispatchQueue.main.async {
@@ -98,7 +98,7 @@ class TodayTabViewModel: ObservableObject {
     }
 }
 
-extension TodayTabViewModel: LocationManagerDelegate {
+extension TodayViewModel: LocationManagerDelegate {
     func didUpdateLocation() {
         fetchData()
         showWeatherImage()
